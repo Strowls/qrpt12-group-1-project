@@ -6,7 +6,6 @@ const chromedriver = require('chromedriver');
 export class mccormickPage extends BasePage {
     driver: WebDriver;
     url: string = 'https://www.mccormick.com/';
-    mcPage: By = By.xpath('(//a[@*])[1]');
     frenchs: By = By.xpath('(//a[@*])[2]');
     gourmet: By = By.xpath('(//a[@*])[3]');
     grillmates: By = By.xpath('(//a[@*])[4]');
