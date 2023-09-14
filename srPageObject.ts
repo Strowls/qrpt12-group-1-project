@@ -1,7 +1,9 @@
 import { By, until, WebDriver, WebElement } from "selenium-webdriver";
+import { BasePage } from "./basePage";
 const chromedriver = require('chromedriver');
 
-export class mccormickPage {
+
+export class mccormickPage extends BasePage {
     driver: WebDriver;
     url: string = 'https://www.mccormick.com/';
     frenchs: By = By.xpath('(//a[@*])[2]');
