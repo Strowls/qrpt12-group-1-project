@@ -1,6 +1,5 @@
-import { By, until, WebDriver, WebElement } from "selenium-webdriver";
+import { By, WebDriver } from "selenium-webdriver";
 import { BasePage } from "./basePage";
-const chromedriver = require('chromedriver');
 
 
 export class mccormickPage extends BasePage {
