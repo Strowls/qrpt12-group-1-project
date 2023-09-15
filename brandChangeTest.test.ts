@@ -1,4 +1,3 @@
-import { Driver } from "selenium-webdriver/chrome";
 import {mccormickPage} from "./srPageObject";
 const mccSR = new mccormickPage
 
