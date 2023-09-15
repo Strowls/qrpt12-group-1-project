@@ -4,6 +4,8 @@ const mccSR = new mccormickPage
 
 test ('Brand change via top menu',async () => {
     await mccSR.navigate();
+    await mccSR.driver.manage().window().maximize()
+    await mccSR.driver.sleep(5000);
     await mccSR.click(mccSR.frenchs);
     await mccSR.driver.sleep(2000);
     await mccSR.navigate();
