@@ -1,5 +1,6 @@
 import {mcHowToPage} from './mcHowToPage'
 const mcck = new mcHowToPage ();
+const fs = require("fs")
 
 test('How To Make Red Velvet Brownies', async() => {
     await mcck.navigate()
@@ -13,10 +14,11 @@ test('How To Make Red Velvet Brownies', async() => {
     await mcck.driver.sleep(2000)
     await mcck.click(mcck.viewRecipe)
     await mcck.driver.sleep(2000)
+    await fs.writeFile(`${__dirname}/redVelvetBRecipe.png`,
     await mcck.driver.takeScreenshot(), "base64",
     (e) => {
         if (e) console.error(e)
         else console.log('Save Succesful')
-    }
+    })
     await mcck.driver.quit()
 })

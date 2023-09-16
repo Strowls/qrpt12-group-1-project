@@ -1,5 +1,6 @@
 import {mcHowToPage} from './mcHowToPage'
 const mcck = new mcHowToPage ();
+const fs = require("fs")
 
 test('Find chef recipe', async() => {
     await mcck.navigate()
@@ -14,10 +15,11 @@ test('Find chef recipe', async() => {
     await mcck.driver.sleep(2000)
     await mcck.click(mcck.viewRecipe)
     await mcck.driver.sleep(2000)
+    await fs.writeFile(`${__dirname}/cknEggRollRecipe.png`,
     await mcck.driver.takeScreenshot(), "base64",
     (e) => {
         if (e) console.error(e)
         else console.log('Save Succesful')
-    }
+    })
     await mcck.driver.quit()
 })
